@@ -1,0 +1,413 @@
+/* ========= VARIABLES CSS Y FUENTES LOCALES ========= */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2980b9;
+  --dark-color: #2c3e50;
+  --text-color: #555;
+  --background-light-blue: #f4f7f9;
+  --white-color: #ffffff;
+  --footer-bg: #212f3d;
+  --font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ========= ESTILOS GLOBALES Y RESETEO ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+  background: var(--white-color);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1, h2, h3, h4 {
+  color: var(--dark-color);
+  line-height: 1.2;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.5rem; }
+
+p { margin-bottom: 1rem; }
+a { text-decoration: none; color: var(--primary-color); }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; }
+
+/* ========= CLASES DE UTILIDAD ========= */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--white-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ========= HEADER / NAVEGACIÓN ========= */
+.main-header {
+  background: transparent; 
+  padding: 15px 0;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: var(--white-color); 
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+}
+
+
+/* ========= SECCIÓN HERO (MODIFICADA PARA VIDEO) ========= */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white-color);
+  position: relative; /* Contenedor para el video y el contenido */
+  overflow: hidden; /* Oculta partes del video que se salgan */
+}
+
+/* Estilos para el video de fondo */
+#hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1; /* Detrás de todo el contenido */
+}
+
+/* Capa oscura sobre el video para que el texto sea legible */
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 62, 80, 0.7);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative; /* Asegura que el contenido esté sobre la capa oscura */
+    z-index: 3;
+    padding-top: 70px; 
+}
+
+.hero-content h1, .hero-content h2, .hero-content p {
+  color: var(--white-color);
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+    color: var(--white-color); /* <-- CAMBIA ESTA LÍNEA (de --primary-color a --white-color) */
+
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--primary-color); /* <-- AÑADE ESTA LÍNEA para poner el texto celeste */
+
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+/* ========= INFO BAR ========= */
+#info-bar {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 2.5rem 0;
+  position: relative;
+  z-index: 10;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  transform: translateY(-50%);
+}
+
+.info-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.info-box i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-box h3 {
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* ========= SERVICES ========= */
+#services {
+    background-color: var(--background-light-blue);
+    padding-top: 40px; 
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: var(--white-color);
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* ========= TEAM ========= */
+#team {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    text-align: center;
+    background: var(--white-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.team-info {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 20px;
+}
+
+.team-info h3, .team-info p {
+    color: var(--white-color);
+}
+
+.team-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.team-info .role {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* ========= TESTIMONIALS ========= */
+#testimonials {
+    padding: 80px 0;
+    background: var(--background-light-blue);
+}
+
+.testimonial-card {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary-color);
+}
+
+.condition {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: #f39c12;
+}
+
+/* ========= FOOTER ========= */
+.main-footer {
+    background: var(--footer-bg);
+    color: #aab2b9;
+    padding-top: 80px;
+}
+
+.main-footer h4 {
+    color: var(--white-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #aab2b9;
+    transition: color 0.3s ease;
+}
+.footer-column a:hover {
+    color: var(--primary-color);
+}
+
+.footer-column input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #3e4b5a;
+    margin-top: 40px;
+    padding: 25px 0;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
