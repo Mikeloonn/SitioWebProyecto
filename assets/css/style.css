@@ -7,7 +7,7 @@
   --background-light-blue: #f4f7f9;
   --white-color: #ffffff;
   --footer-bg: #212f3d;
-  --font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 /* ========= ESTILOS GLOBALES Y RESETEO ========= */
@@ -202,7 +202,6 @@ img { max-width: 100%; height: auto; }
   font-size: 4rem;
   font-weight: 700;
     color: var(--white-color); /* <-- CAMBIA ESTA LÍNEA (de --primary-color a --white-color) */
-
 }
 
 .hero-content h2 {
