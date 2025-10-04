@@ -8,13 +8,14 @@
   --background-light-blue: #f4f7f9;
   --white-color: #ffffff;
   --footer-bg: #212f3d;
-  --font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  --font-family: "Poppins", sans-serif;
   
   --color1: #D8EEFD;
   --color2: #475C6A;
   --color3: #00ECFF;
   --color4: #ffffff;
   --color5: #1C99D4;
+
 
   /* ===== AÑADE ESTAS LÍNEAS DE ABAJO ===== */
   --color1pro: var(--footer-bg);
@@ -154,7 +155,7 @@ img {
 .main-header {
   background: rgba(44, 62, 80, 0.85);
   padding: 5px 0;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -469,9 +470,53 @@ img {
 
 }
 
+
+.col {
+    /* Establecen el mismo ancho para cada caja, en una misma fila */
+    flex-grow: 1;
+    flex-basis: 0;
+
+    /* Espacio entre columnas  */
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* Evita que se modifique el tamaño de la caja flexible */
+    box-sizing: border-box;
+}
+
+.col-60 {
+    max-width: 60%;
+    flex-basis: 60%;
+}
+
+.col-40 {
+    max-width: 40%;
+    flex-basis: 40%;
+}
+
+.col-30 {
+    max-width: 30%;
+    flex-basis: 30%;
+}
+
 .col-33 {
-  max-width: 33.33%;
-  flex-basis: 33.33%;
+    max-width: 33.33%;
+    flex-basis: 33.33%;
+}
+
+.col-66 {
+    max-width: 66.67%;
+    flex-basis: 66.67%;
+}
+
+.col-50 {
+    max-width: 50%;
+    flex-basis: 50%;
+}
+
+.col-100 {
+    max-width: 100%;
+    flex-basis: 100%;
 }
 
 .padding-small {
@@ -545,7 +590,7 @@ img {
 }
 
 .centrar_img {
-      display: block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 180px;  /* Le damos un ancho fijo */
@@ -556,6 +601,41 @@ img {
     border-radius: 100%;
     margin-bottom: 20px; /* Espacio entre la foto y el nombre */
 
+}
+/* Selectores para tabla */
+.tarifas {
+  background-color: var(--color1);
+  color: var(--color4);
+}
+.tbl-tarifa {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tbl-tarifa caption {
+    margin-bottom: 13px;
+    margin-top: 13px;
+}
+.tbl-tarifa th, .tbl-tarifa td {
+    border: 1px solid var(--color2);
+    padding: 15px;
+    text-align: center;
+}
+.tbl-tarifa caption {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+.tbl-tarifa tbody, .tbl-tarifa {
+    background-color: var(--color4);
+    color: var(--text-color);
+}
+.tbl-tarifa thead{
+    background-color: var(--color2);
+    color: var(--color4);
+}
+.tbl-tarifa tfoot td{
+    font-style: italic;
+    text-align: right;
 }
 
 .nombrePaciente {
@@ -660,7 +740,7 @@ img {
 }
 
 .imgHourMaxWidth {
-  max-width: 100px;
+  max-width: 90px;
   height: auto;
   display: inline-block;
   margin-right: 10px;
@@ -684,7 +764,7 @@ tmb center*/
 
 .nav-menuLastSection-link {
   font-size: 13.5px;
-  color: var(--white-color);
+  color: var(--);
   text-decoration: none;
   /* quita el subrayado */
   display: block;
@@ -790,4 +870,139 @@ derecha */
 
 .button-footer:hover {
   color: var(--color3pro);
+}
+
+/*css formulario*/
+
+.form-control{
+    display: block;/*Convertir objeto en un caja*/
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 5px;
+    font: inherit;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color1);
+    transition: all 0.1s ease-in-out;
+}
+
+.form-control:focus{
+    border-bottom: 1px solid var(--color4);
+}
+
+.form-link{
+    text-decoration: none;
+    color: var(--color5);
+}
+
+.form-submit{
+    background-color: var(--color1);
+    color: var(--color2);
+    padding: 10px 20px;
+    font: inherit;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.form-submit:hover{
+    background-color: var(--color3);
+    
+}
+
+.form-noresize{
+    resize: none;
+}
+
+.page-title{
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--color4);
+}
+
+.page-subTitle{
+  font-size: 15px;
+  color: var(--color4);
+}
+
+.div-img{
+  min-height: 250px;
+}
+
+.page-title-img {
+    padding-top: 100px;
+    background: linear-gradient(90deg, rgba(52, 72, 86, 1) 0%, rgba(32, 54, 70, 0.6) 50%), url(../img/page_title.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color2);
+}
+.bar-top{
+    background-color: var(--color5);
+    color: var(--color4);
+}
+.bar-top a{
+  font-family: var(--font-family);
+}
+
+
+.contacs a{
+    color: var(--color4);
+    font-family:var(--font-family); 
+    font-size: 12px;
+    letter-spacing: 1.3px;
+    transition: all 0.5s ease-in-out;
+    font-weight: bold;
+    text-transform: lowercase;
+    
+}
+.contacs a:hover{
+    color: var(--color2);
+    
+}
+.bartop-conc-red{
+    justify-content: space-between;
+    
+}
+.Redes a{
+    color: var(--color4);
+    transition: all 0.5s ease-in-out;
+    margin: 1px; 
+}
+
+.Redes a:hover{
+    color: var(--color2);
+}
+.container-videopromo {
+  max-width: 800px;
+  margin: auto;
+}
+
+.video-promocional {
+  background-color: var(--color1);
+  color: var(--color4);
+}
+
+.row-promo {
+  display: flex;
+  flex-direction: row;
+  margin-left: -10px;
+  margin-right: -10px;
+  flex-wrap: wrap;
+
+}
+.col-promo {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+
+}
+
+.margin-bottom-55px {
+  margin-bottom: 55px;
+}
+.margin-top {
+  margin: 80px;
 }
