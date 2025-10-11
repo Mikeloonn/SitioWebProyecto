@@ -20,7 +20,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!-- Enlace para que HTML acceda a Font Awesome 7.0.1 para iconos  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 
 <body>
@@ -49,7 +56,7 @@
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">INICIO</a></li>
+                    <li><a class="main-nav-active" href="index.html">INICIO</a></li>
                     <li><a href="assets/pages/sobrenosotros.html">SOBRE NOSOTROS</a></li>
                     <li><a href="assets/pages/servicios.html">SERVICIOS</a></li>
                     <li><a href="assets/pages/blogs.html">BLOGS</a></li>
@@ -67,7 +74,7 @@
                 Tu navegador no soporta videos HTML5.
             </video>
 
-            <div class="hero-content">
+            <div class="hero-content slide-in-left">
                 <h1>Acupuntura y Terapias Holísticas</h1>
                 <h2>con Yeni Arriarán</h2>
                 <p>Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Proin eget
@@ -388,10 +395,10 @@
                             <!-- cajita y hora -->
                             <!-- cajita -->
                             <div class="row2">
-                                <div>
+                                <div class="col-50">
                                     <img class="img-fluid2 imgHourMaxWidth" src="assets/img/relojfooter.png" alt="" />
                                 </div>
-                                <div>
+                                <div class="col-50">
                                     <p class="p-Dias">Lunes - Sábado</p>
                                     <p class="p-MatchSectionForm">8:00AM - 8:00PM</p>
                                 </div>
@@ -399,10 +406,10 @@
                             <!-- cajita y hora -->
                             <!-- cajita -->
                             <div class="row2">
-                                <div>
+                                <div class="col-50">
                                     <img class="img-fluid2 imgHourMaxWidth" src="assets/img/relojfooter.png" alt="" />
                                 </div>
-                                <div>
+                                <div class="col-50">
                                     <p class="p-Dias">Domingos - Festivos</p>
                                     <p class="p-MatchSectionForm">10:00AM - 5:00PM</p>
                                 </div>
@@ -431,6 +438,10 @@
             </div>
         </div>
     </footer>
+
+    <a href="#" class="scroll-up">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
 </body>
 
 </html>

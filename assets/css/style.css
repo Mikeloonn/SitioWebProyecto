@@ -9,7 +9,7 @@
   --white-color: #ffffff;
   --footer-bg: #212f3d;
   --font-family: "Poppins", sans-serif;
-  
+
   --color1: #D8EEFD;
   --color2: #475C6A;
   --color3: #00ECFF;
@@ -36,7 +36,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -198,6 +198,9 @@ img {
   color: var(--primary-color);
 }
 
+.main-nav-active {
+  color: var(--primary-color) !important;
+}
 
 /* ========= SECCIÓN HERO (MODIFICADA PARA VIDEO) ========= */
 #hero {
@@ -341,9 +344,11 @@ img {
 .about-us-grid {
   display: grid;
   /* La primera columna (texto) toma el espacio sobrante, la segunda (video) tiene un ancho fijo */
-  grid-template-columns: 1fr 300px; 
-  gap: 60px; /* Espacio entre el texto y el video */
-  align-items: center; /* Centra verticalmente ambos elementos */
+  grid-template-columns: 1fr 300px;
+  gap: 60px;
+  /* Espacio entre el texto y el video */
+  align-items: center;
+  /* Centra verticalmente ambos elementos */
 }
 
 /* 2. AJUSTAMOS EL TÍTULO Y EL TEXTO PARA QUE SE ALINEEN A LA IZQUIERDA */
@@ -357,14 +362,14 @@ img {
 }
 
 #about-us .section-title p {
-    max-width: 700px;
-    margin: 15px 0 0 0; 
-    font-size: 1.1rem;
-    color: var(--text-color);
+  max-width: 700px;
+  margin: 15px 0 0 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
 }
 
 .video-container {
-  max-width: 380px; 
+  max-width: 380px;
   margin: 0 auto;
   border-radius: 15px;
   box-shadow: 0 15px 40px rgba(44, 62, 80, 0.15);
@@ -381,25 +386,36 @@ img {
 
 /* ========= SECCIÓN ESPECIALISTA ========= */
 #especialista {
-  background-color: var(--background-light-blue); /* Un fondo suave para diferenciar la sección */
+  background-color: var(--background-light-blue);
+  /* Un fondo suave para diferenciar la sección */
   padding: 80px 0;
 }
 
 .especialista-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.5fr; /* Dos columnas de igual tamaño */
-  gap: 60px; /* Espacio entre la imagen y el texto */
-  align-items: center; /* Centra verticalmente el contenido de ambas columnas */
+  grid-template-columns: 0.8fr 1.5fr;
+  /* Dos columnas de igual tamaño */
+  gap: 60px;
+  /* Espacio entre la imagen y el texto */
+  align-items: center;
+  /* Centra verticalmente el contenido de ambas columnas */
 }
 
 .especialista-imagen img {
-  width: 100%; /* La imagen ocupa todo el ancho de su columna */
-  max-width: 500px; /* Un tamaño máximo para que no sea excesivamente grande en pantallas anchas */
-  height: auto; /* Mantiene la proporción original */
-  border-radius: 15px; /* Bordes redondeados para un look más suave */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
-  display: block; /* Elimina espacios indeseados debajo de la imagen */
-  margin: 0 auto; /* Centra la imagen si la columna es más ancha que el max-width */
+  width: 100%;
+  /* La imagen ocupa todo el ancho de su columna */
+  max-width: 500px;
+  /* Un tamaño máximo para que no sea excesivamente grande en pantallas anchas */
+  height: auto;
+  /* Mantiene la proporción original */
+  border-radius: 15px;
+  /* Bordes redondeados para un look más suave */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil para darle profundidad */
+  display: block;
+  /* Elimina espacios indeseados debajo de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen si la columna es más ancha que el max-width */
 }
 
 .especialista-info h2 {
@@ -428,7 +444,8 @@ img {
   font-size: 1.1rem;
   line-height: 1.7;
   color: var(--text-color);
-  margin-bottom: 25px; /* Espacio antes del botón */
+  margin-bottom: 25px;
+  /* Espacio antes del botón */
 }
 
 /* Jose Armas */
@@ -472,51 +489,51 @@ img {
 
 
 .col {
-    /* Establecen el mismo ancho para cada caja, en una misma fila */
-    flex-grow: 1;
-    flex-basis: 0;
+  /* Establecen el mismo ancho para cada caja, en una misma fila */
+  flex-grow: 1;
+  flex-basis: 0;
 
-    /* Espacio entre columnas  */
-    padding-left: 15px;
-    padding-right: 15px;
+  /* Espacio entre columnas  */
+  padding-left: 15px;
+  padding-right: 15px;
 
-    /* Evita que se modifique el tamaño de la caja flexible */
-    box-sizing: border-box;
+  /* Evita que se modifique el tamaño de la caja flexible */
+  box-sizing: border-box;
 }
 
 .col-60 {
-    max-width: 60%;
-    flex-basis: 60%;
+  max-width: 60%;
+  flex-basis: 60%;
 }
 
 .col-40 {
-    max-width: 40%;
-    flex-basis: 40%;
+  max-width: 40%;
+  flex-basis: 40%;
 }
 
 .col-30 {
-    max-width: 30%;
-    flex-basis: 30%;
+  max-width: 30%;
+  flex-basis: 30%;
 }
 
 .col-33 {
-    max-width: 33.33%;
-    flex-basis: 33.33%;
+  max-width: 33.33%;
+  flex-basis: 33.33%;
 }
 
 .col-66 {
-    max-width: 66.67%;
-    flex-basis: 66.67%;
+  max-width: 66.67%;
+  flex-basis: 66.67%;
 }
 
 .col-50 {
-    max-width: 50%;
-    flex-basis: 50%;
+  max-width: 50%;
+  flex-basis: 50%;
 }
 
 .col-100 {
-    max-width: 100%;
-    flex-basis: 100%;
+  max-width: 100%;
+  flex-basis: 100%;
 }
 
 .padding-small {
@@ -539,6 +556,9 @@ img {
   margin-top: 10px;
   transition: all 0.4s ease-in-out;
   font-size: 24px;
+  box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
 }
 
 .button-service:hover {
@@ -590,52 +610,67 @@ img {
 }
 
 .centrar_img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 180px;  /* Le damos un ancho fijo */
-    height: 180px; /* Y un alto fijo para que sea un círculo perfecto */
-    object-fit: cover; /* ¡MUY IMPORTANTE! Evita que la foto se deforme */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  /* Le damos un ancho fijo */
+  height: 180px;
+  /* Y un alto fijo para que sea un círculo perfecto */
+  object-fit: cover;
+  /* ¡MUY IMPORTANTE! Evita que la foto se deforme */
 
-    border: 4px solid rgb(216, 238, 253); /* Forma más corta de escribir el borde */
-    border-radius: 100%;
-    margin-bottom: 20px; /* Espacio entre la foto y el nombre */
+  border: 4px solid rgb(216, 238, 253);
+  /* Forma más corta de escribir el borde */
+  border-radius: 100%;
+  margin-bottom: 20px;
+  /* Espacio entre la foto y el nombre */
 
 }
+
 /* Selectores para tabla */
 .tarifas {
   background-color: var(--color1);
   color: var(--color4);
 }
+
 .tbl-tarifa {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
+
 .tbl-tarifa caption {
-    margin-bottom: 13px;
-    margin-top: 13px;
+  margin-bottom: 13px;
+  margin-top: 13px;
 }
-.tbl-tarifa th, .tbl-tarifa td {
-    border: 1px solid var(--color2);
-    padding: 15px;
-    text-align: center;
+
+.tbl-tarifa th,
+.tbl-tarifa td {
+  border: 1px solid var(--color2);
+  padding: 15px;
+  text-align: center;
 }
+
 .tbl-tarifa caption {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
 }
-.tbl-tarifa tbody, .tbl-tarifa {
-    background-color: var(--color4);
-    color: var(--text-color);
+
+.tbl-tarifa tbody,
+.tbl-tarifa {
+  background-color: var(--color4);
+  color: var(--text-color);
 }
-.tbl-tarifa thead{
-    background-color: var(--color2);
-    color: var(--color4);
+
+.tbl-tarifa thead {
+  background-color: var(--color2);
+  color: var(--color4);
 }
-.tbl-tarifa tfoot td{
-    font-style: italic;
-    text-align: right;
+
+.tbl-tarifa tfoot td {
+  font-style: italic;
+  text-align: right;
 }
 
 .nombrePaciente {
@@ -740,7 +775,7 @@ img {
 }
 
 .imgHourMaxWidth {
-  max-width: 90px;
+  width: 80px;
   height: auto;
   display: inline-block;
   margin-right: 10px;
@@ -874,105 +909,115 @@ derecha */
 
 /*css formulario*/
 
-.form-control{
-    display: block;/*Convertir objeto en un caja*/
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px 5px;
-    font: inherit;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid var(--color1);
-    transition: all 0.1s ease-in-out;
+.form-control {
+  display: block;
+  /*Convertir objeto en un caja*/
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px 5px;
+  font: inherit;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color1);
+  transition: all 0.1s ease-in-out;
 }
 
-.form-control:focus{
-    border-bottom: 1px solid var(--color4);
+.form-control:focus {
+  border-bottom: 1px solid var(--color3);
 }
 
-.form-link{
-    text-decoration: none;
-    color: var(--color5);
+.form-link {
+  text-decoration: none;
+  color: var(--color5);
 }
 
-.form-submit{
-    background-color: var(--color1);
-    color: var(--color2);
-    padding: 10px 20px;
-    font: inherit;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
+.form-submit {
+  background-color: var(--color1);
+  color: var(--color2);
+  padding: 10px 20px;
+  font: inherit;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease-in-out;
 }
 
-.form-submit:hover{
-    background-color: var(--color3);
-    
+.form-submit:hover {
+  background-color: var(--color3);
+
 }
 
-.form-noresize{
-    resize: none;
+.form-noresize {
+  resize: none;
 }
 
-.page-title{
+.page-title {
   font-size: 25px;
   font-weight: bold;
   color: var(--color4);
 }
 
-.page-subTitle{
+.page-subTitle {
   font-size: 15px;
   color: var(--color4);
 }
 
-.div-img{
+.div-img {
   min-height: 250px;
 }
 
 .page-title-img {
-    padding-top: 100px;
-    background: linear-gradient(90deg, rgba(52, 72, 86, 1) 0%, rgba(32, 54, 70, 0.6) 50%), url(../img/page_title.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--color2);
+  padding-top: 100px;
+  background: linear-gradient(90deg, rgba(52, 72, 86, 1) 0%, rgba(32, 54, 70, 0.6) 50%), url(../img/page_title.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color2);
 }
-.bar-top{
-    background-color: var(--color5);
-    color: var(--color4);
+
+.bar-top {
+  background-color: var(--color5);
+  color: var(--color4);
 }
-.bar-top a{
+
+.bar-top a {
   font-family: var(--font-family);
 }
 
 
-.contacs a{
-    color: var(--color4);
-    font-family:var(--font-family); 
-    font-size: 12px;
-    letter-spacing: 1.3px;
-    transition: all 0.5s ease-in-out;
-    font-weight: bold;
-    text-transform: lowercase;
-    
-}
-.contacs a:hover{
-    color: var(--color2);
-    
-}
-.bartop-conc-red{
-    justify-content: space-between;
-    
-}
-.Redes a{
-    color: var(--color4);
-    transition: all 0.5s ease-in-out;
-    margin: 1px; 
+.contacs a {
+  color: var(--color4);
+  font-family: var(--font-family);
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  transition: all 0.5s ease-in-out;
+  font-weight: bold;
+  text-transform: lowercase;
+
 }
 
-.Redes a:hover{
-    color: var(--color2);
+.contacs a:hover {
+  color: var(--color2);
+
 }
+
+.bartop-conc-red {
+  justify-content: space-between;
+
+}
+
+.Redes a {
+  color: var(--color4);
+  transition: all 0.5s ease-in-out;
+  margin: 1px;
+}
+
+.Redes a:hover {
+  color: var(--color2);
+}
+
 .container-videopromo {
   max-width: 800px;
   margin: auto;
@@ -991,6 +1036,7 @@ derecha */
   flex-wrap: wrap;
 
 }
+
 .col-promo {
   flex-grow: 1;
   flex-basis: 0;
@@ -1003,6 +1049,75 @@ derecha */
 .margin-bottom-55px {
   margin-bottom: 55px;
 }
+
 .margin-top {
   margin: 80px;
+}
+
+.scroll-up {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  /*200px 200px 200px 200px */
+
+  /* Posicionamiento fijo */
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 15px 20px 0 rgba(32, 54, 70, 0.4);
+  z-index: 10;
+}
+
+.scroll-up:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  transform: scale(1.3) translateY(0px);
+}
+.slide-in-left {
+  -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2025-10-9 9:54:7
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
