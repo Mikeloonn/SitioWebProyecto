@@ -327,6 +327,11 @@ img {
   filter: brightness(0) invert(1);
 }
 
+.info-box i {
+  font-size: 45px; /* Le damos el mismo tamaño que la altura de la imagen */
+  margin-bottom: 0.8rem;
+}
+
 .info-box h3 {
   color: var(--white-color);
   font-size: 1.1rem;
@@ -430,7 +435,7 @@ img {
 .especialista-info h2::after {
   content: '';
   display: block;
-  width: 505px;
+  width: 80%;
   height: 4px;
   background-color: var(--primary-color);
   border-radius: 2px;
@@ -458,8 +463,6 @@ img {
 .padding-xl {
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-left: -10px;
-  margin-right: -10px;
 }
 
 .container {
