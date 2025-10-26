@@ -1132,6 +1132,9 @@ derecha */
 
 /* Media Query para móviles (hasta 576px) */
 @media screen and (max-width: 576px) {
+   .container {
+    max-width: 100%; /* Anula la regla de 'max-width: 90%' en móviles */
+  }
 
   /* ===== AJUSTES GLOBALES Y SECCIONES ===== */
   .section-padding {
@@ -1271,6 +1274,65 @@ derecha */
   .formularioEmail,
   .formularioSubscribe {
     width: 100%;
+  }
+
+  
+
+}
+
+/* =================================================================== */
+/* ===== AJUSTES ESPECÍFICOS PARA PANTALLAS MUY ESTRECHAS ===== */
+/* =================================================================== */
+@media screen and (max-width: 420px) {
+
+  /* ===== AJUSTES GLOBALES ===== */
+  h2 {
+    font-size: 1.8rem; /* Reduce el tamaño de todos los H2 en móvil */
+  }
+
+  /* ===== BARRA SUPERIOR (TELÉFONO Y REDES) ===== */
+  .bar-top .contacs a {
+    font-size: 9px;
+  }
+
+  /* ===== HEADER / NAVEGACIÓN ===== */
+  .main-header .main-nav a {
+    font-size: 12px; /* Hacemos la letra del menú más pequeña para que no se amontone */
+  }
+
+  /* ===== BARRA DE INFORMACIÓN (DEBAJO DEL HERO) ===== */
+  .info-bar-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info-box a {
+    padding: 15px 5px; /* Reducimos el padding para ganar espacio */
+  }
+
+  .info-box i {
+    font-size: 22px; /* Hacemos los iconos más pequeños */
+    margin-bottom: 0.5rem;
+  }
+
+  .info-box h3 {
+    font-size: 0.75rem; /* Hacemos el texto más pequeño */
+  }
+
+  /* ===== SECCIÓN DE TARIFAS (TABLA) ===== */
+  .table-container {
+    overflow-x: auto; /* Permite el scroll horizontal solo en la tabla */
+    padding-bottom: 10px;
+  }
+
+  /* ===== FOOTER (PIE DE PÁGINA) ===== */
+  .nav-menuFooter {
+    gap: 0px;
+  }
+
+  .button-footer {
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 13px;
   }
 
 }
