@@ -10,14 +10,12 @@
   --footer-bg: #212f3d;
   --font-family: "Poppins", sans-serif;
 
-  --color1: #D8EEFD;
-  --color2: #475C6A;
-  --color3: #00ECFF;
+  --color1: #d8eefd;
+  --color2: #475c6a;
+  --color3: #00ecff;
   --color4: #ffffff;
-  --color5: #1C99D4;
+  --color5: #1c99d4;
 
-
-  
   --color1pro: var(--footer-bg);
   /* Fondo principal del footer */
   --color2pro: var(--primary-color);
@@ -137,7 +135,7 @@ img {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 50px;
   height: 3px;
@@ -174,7 +172,6 @@ img {
   display: flex;
   align-items: center;
 }
-
 
 .logo img {
   height: 45px;
@@ -232,7 +229,7 @@ img {
 
 /* Capa oscura sobre el video para que el texto sea legible */
 #hero::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -268,7 +265,6 @@ img {
   font-weight: 600;
   color: var(--primary-color);
   /* <-- AÑADE ESTA LÍNEA para poner el texto celeste */
-
 }
 
 .hero-content p {
@@ -314,12 +310,10 @@ img {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
 .info-box a:hover {
   background-color: var(--secondary-color);
   transform: translateY(-5px);
 }
-
 
 .info-box img {
   height: 45px;
@@ -389,7 +383,6 @@ img {
   display: block;
 }
 
-
 /* ========= SECCIÓN ESPECIALISTA ========= */
 #especialista {
   background-color: var(--background-light-blue);
@@ -434,7 +427,7 @@ img {
 
 /* Línea decorativa debajo del título "Conoce a nuestra especialista" */
 .especialista-info h2::after {
-  content: '';
+  content: "";
   display: block;
   width: 80%;
   height: 4px;
@@ -444,7 +437,6 @@ img {
   left: 0;
   bottom: 0;
 }
-
 
 .especialista-info p {
   font-size: 1.1rem;
@@ -478,8 +470,6 @@ img {
   margin-left: -10px;
   margin-right: -10px;
   flex-wrap: wrap;
-
-
 }
 
 .col {
@@ -488,9 +478,7 @@ img {
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
-
 }
-
 
 .col {
   /* Establecen el mismo ancho para cada caja, en una misma fila */
@@ -591,10 +579,6 @@ img {
 }
 
 /*Nick Rodrigo Pinto*/
-.div1 {
-  background-color: rgb(247, 247, 247);
-}
-
 .div2 {
   background-color: rgb(216, 238, 253);
 }
@@ -602,7 +586,6 @@ img {
 .titlePaciente {
   color: rgb(32, 54, 70);
   font-family: Verdana;
-  ;
 }
 
 .padding-30 {
@@ -629,7 +612,6 @@ img {
   border-radius: 100%;
   margin-bottom: 20px;
   /* Espacio entre la foto y el nombre */
-
 }
 
 /* Selectores para tabla */
@@ -724,12 +706,13 @@ img {
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 0px;
 }
 
 .img-fluid2 {
   display: block;
   width: 100%;
+  max-width: 50px;
   height: auto;
 }
 
@@ -770,7 +753,6 @@ img {
   flex-grow: 1;
   /* cada columna ocupa el mismo espacio */
   flex-basis: 0;
-  /* cada columna ocupa el mismo espacio */
   /* espacio entre columnas */
   padding-left: 15px;
   padding-right: 15px;
@@ -952,7 +934,6 @@ derecha */
 
 .form-submit:hover {
   background-color: var(--color3);
-
 }
 
 .form-noresize {
@@ -976,7 +957,12 @@ derecha */
 
 .page-title-img {
   padding-top: 100px;
-  background: linear-gradient(90deg, rgba(52, 72, 86, 1) 0%, rgba(32, 54, 70, 0.6) 50%), url(../img/page_title.jpg);
+  background: linear-gradient(
+      90deg,
+      rgba(52, 72, 86, 1) 0%,
+      rgba(32, 54, 70, 0.6) 50%
+    ),
+    url(../img/page_title.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--color2);
@@ -991,7 +977,6 @@ derecha */
   font-family: var(--font-family);
 }
 
-
 .contacs a {
   color: var(--color4);
   font-family: var(--font-family);
@@ -1000,17 +985,14 @@ derecha */
   transition: all 0.5s ease-in-out;
   font-weight: bold;
   text-transform: lowercase;
-
 }
 
 .contacs a:hover {
   color: var(--color2);
-
 }
 
 .bartop-conc-red {
   justify-content: space-between;
-
 }
 
 .Redes a {
@@ -1037,7 +1019,6 @@ derecha */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 
 .col-promo {
@@ -1046,7 +1027,6 @@ derecha */
   padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
-
 }
 
 .margin-bottom-55px {
@@ -1084,7 +1064,9 @@ derecha */
   color: var(--dark-color);
   transform: scale(1.3) translateY(0px);
 }
-
+.reloj-basis {
+  margin: auto;
+}
 .slide-in-left {
   -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -1132,7 +1114,7 @@ derecha */
 
 /* Media Query para móviles (hasta 576px) */
 @media screen and (max-width: 576px) {
-   .container {
+  .container {
     max-width: 100%; /* Anula la regla de 'max-width: 90%' en móviles */
   }
 
@@ -1224,7 +1206,7 @@ derecha */
   }
 
   /* ===== VIDEO PROMOCIONAL DE YOUTUBE ===== */
-  .container-videopromo{
+  .container-videopromo {
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -1254,7 +1236,7 @@ derecha */
     max-width: 50%;
     margin-bottom: 30px; /* Espacio vertical entre filas */
   }
-  
+
   /* Filas de los horarios DENTRO de la sección "Horarios" */
   .LastSectionColor .col2 .row2 {
     display: flex;
@@ -1275,16 +1257,11 @@ derecha */
   .formularioSubscribe {
     width: 100%;
   }
-
-  
-
 }
-
 /* =================================================================== */
 /* ===== AJUSTES ESPECÍFICOS PARA PANTALLAS MUY ESTRECHAS ===== */
 /* =================================================================== */
 @media screen and (max-width: 380px) {
-
   /* ===== AJUSTES GLOBALES ===== */
   h2 {
     font-size: 1.8rem; /* Reduce el tamaño de todos los H2 en móvil */
@@ -1334,5 +1311,83 @@ derecha */
     padding: 5px 5px;
     font-size: 13px;
   }
+}
 
+/* Ajustes responsive para pantallas tablet (hasta 768px) */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 50px;
+  }
+  #about-us {
+    padding-top: 20px;
+  }
+  #infob-bar {
+    padding-bottom: 5px;
+  }
+  .service h3 {
+    margin-top: 7px;
+    font-size: 19px;
+  }
+  .service p {
+    margin-top: 0px;
+    font-size: 13.5px;
+  }
+  .button-wrapper {
+    margin-top: 20px;
+  }
+  #especialista {
+    padding-top: 50px;
+  }
+  #testimonials {
+    background-color: var(--color1);
+  }
+  #testimonials p {
+    font-size: 16.5px;
+  }
+  .section-padding {
+    padding: 20px 0; /* Reduce el espaciado vertical en todas las secciones */
+  }
+  .container-videopromo {
+    width: 90%;
+    padding-top: 40px;
+  }
+  .container-videopromo p {
+    font-size: 16.5px;
+    padding-left: 1px;
+  }
+  .padding-xl {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .margin-top {
+    margin-top: 40px; /* Reduce el margen superior del formulario */
+  }
+  .form-control .col {
+    flex-basis: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+  .tf2-form-imag {
+    display: none;
+    width: 0px;
+  }
+  .formulario-row {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .formulariocliente {
+    margin-bottom: 30px;
+  }
+  .p-Dias {
+    font-size: 14px;
+  }
+  .reloj-basis {
+    display: none;
+    width: 0px;
+  }
+  .horarios-dias {
+    width: 100%;
+    max-width: 100%;
+    flex-basis: 100% !important;
+  }
 }
