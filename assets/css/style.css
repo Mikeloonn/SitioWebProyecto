@@ -344,11 +344,13 @@ img {
 .about-us-grid {
   display: grid;
   /* La primera columna (texto) toma el espacio sobrante, la segunda (video) tiene un ancho fijo */
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 0.5fr 300px;
   gap: 60px;
   /* Espacio entre el texto y el video */
   align-items: center;
   /* Centra verticalmente ambos elementos */
+  justify-content: center;
+  margin: auto 0;
 }
 
 /* 2. AJUSTAMOS EL TÍTULO Y EL TEXTO PARA QUE SE ALINEEN A LA IZQUIERDA */
@@ -454,8 +456,8 @@ img {
 }
 
 .padding-xl {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .container {
@@ -686,8 +688,8 @@ img {
   margin-bottom: 25px;
 }
 
-.padding-bottom-50px {
-  padding-bottom: 50px;
+.padding-bottom-30px {
+  padding-bottom: 30px;
 }
 
 .padding-bottom-10px {
@@ -710,7 +712,6 @@ img {
 }
 
 .img-fluid2 {
-  display: block;
   width: 100%;
   max-width: 50px;
   height: auto;
@@ -1008,6 +1009,7 @@ derecha */
 .container-videopromo {
   max-width: 800px;
   margin: auto;
+  padding-top: 80px;
 }
 
 .video-promocional {
@@ -1065,7 +1067,11 @@ derecha */
   transform: scale(1.3) translateY(0px);
 }
 .reloj-basis {
+  display: flex;
   margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
 }
 .slide-in-left {
   -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
