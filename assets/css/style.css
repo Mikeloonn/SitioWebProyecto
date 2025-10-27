@@ -1264,10 +1264,11 @@ derecha */
     width: 100%;
   }
 }
+
 /* =================================================================== */
 /* ===== AJUSTES ESPECÍFICOS PARA PANTALLAS MUY ESTRECHAS ===== */
 /* =================================================================== */
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
   /* ===== AJUSTES GLOBALES ===== */
   h2 {
     font-size: 1.8rem; /* Reduce el tamaño de todos los H2 en móvil */
@@ -1318,7 +1319,6 @@ derecha */
     font-size: 13px;
   }
 }
-
 /* Ajustes responsive para pantallas tablet (hasta 768px) */
 @media screen and (max-width: 768px) {
   .hero-content h1 {
