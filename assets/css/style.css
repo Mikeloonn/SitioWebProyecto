@@ -162,6 +162,12 @@ img {
   transition: background-color 0.3s ease;
 }
 
+.menu-toggle {
+  font-size: 2rem;
+  display: none;
+  color: var(--color1);
+}
+
 .main-header .container {
   display: flex;
   justify-content: space-between;
@@ -958,11 +964,9 @@ derecha */
 
 .page-title-img {
   padding-top: 100px;
-  background: linear-gradient(
-      90deg,
+  background: linear-gradient(90deg,
       rgba(52, 72, 86, 1) 0%,
-      rgba(32, 54, 70, 0.6) 50%
-    ),
+      rgba(32, 54, 70, 0.6) 50%),
     url(../img/page_title.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1066,6 +1070,7 @@ derecha */
   color: var(--dark-color);
   transform: scale(1.3) translateY(0px);
 }
+
 .reloj-basis {
   display: flex;
   margin: auto;
@@ -1073,6 +1078,7 @@ derecha */
   align-items: center;
   width: 70%;
 }
+
 .slide-in-left {
   -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -1121,36 +1127,50 @@ derecha */
 /* Media Query para móviles (hasta 576px) */
 @media screen and (max-width: 576px) {
   .container {
-    max-width: 100%; /* Anula la regla de 'max-width: 90%' en móviles */
+    max-width: 100%;
+    /* Anula la regla de 'max-width: 90%' en móviles */
   }
 
   /* ===== AJUSTES GLOBALES Y SECCIONES ===== */
   .section-padding {
-    padding: 40px 0; /* Reduce el espaciado vertical en todas las secciones */
+    padding: 40px 0;
+    /* Reduce el espaciado vertical en todas las secciones */
   }
 
   .margin-top {
-    margin-top: 40px; /* Reduce el margen superior del formulario */
+    margin-top: 40px;
+    /* Reduce el margen superior del formulario */
     margin-bottom: 40px;
   }
 
   /* ===== HEADER / NAVEGACIÓN ===== */
-  .main-header .container {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
+.main-header .container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; 
+}
 
-  .main-header .btn {
-    order: 2;
-    margin: 0;
-  }
+/* 2. Reglas de orden */
+.menu-toggle {
+  order: 3; /* Hamburguesa a la izquierda */
+}
 
-  .main-header .main-nav {
-    order: 3;
-    flex-basis: 100%;
-    margin-top: 15px;
-  }
+.main-header .btn {
+  order: 2; /* Botón AGENDAR al centro */
+  margin: 0; /* Quitamos márgenes por si acaso */
+}
+
+.logo {
+  order: 1; /* Logo a la derecha */
+}
+
+/* 4. Menú desplegable (para que se vaya abajo) */
+.main-header .main-nav {
+  order: 4;
+  flex-basis: 100%;
+  margin-top: 5px;
+}
 
   .main-header .main-nav ul {
     justify-content: space-between;
@@ -1187,7 +1207,8 @@ derecha */
 
   /* ===== SECCIÓN "ACERCA DE NOSOTROS" ===== */
   .about-us-grid {
-    grid-template-columns: 1fr; /* Apila el texto y el video */
+    grid-template-columns: 1fr;
+    /* Apila el texto y el video */
     gap: 30px;
   }
 
@@ -1216,6 +1237,7 @@ derecha */
     padding-left: 10%;
     padding-right: 10%;
   }
+
   .col-promo {
     flex-basis: 100%;
     max-width: 100%;
@@ -1233,14 +1255,16 @@ derecha */
 
   /* Contenedor principal de las 4 secciones del footer */
   .LastSectionColor .row2 {
-    gap: 0; /* Anula el 'gap' para que las columnas del 50% encajen */
+    gap: 0;
+    /* Anula el 'gap' para que las columnas del 50% encajen */
   }
 
   /* Cada una de las 4 secciones (Sobre, Enlaces, Suscríbete, Horarios) */
   .LastSectionColor .col2 {
     flex-basis: 50%;
     max-width: 50%;
-    margin-bottom: 30px; /* Espacio vertical entre filas */
+    margin-bottom: 30px;
+    /* Espacio vertical entre filas */
   }
 
   /* Filas de los horarios DENTRO de la sección "Horarios" */
@@ -1265,13 +1289,76 @@ derecha */
   }
 }
 
-/* =================================================================== */
-/* ===== AJUSTES ESPECÍFICOS PARA PANTALLAS MUY ESTRECHAS ===== */
-/* =================================================================== */
+
 @media screen and (max-width: 420px) {
+.main-nav {
+    position: absolute;
+    top: 100%; /* O la altura de tu header + barra superior */
+    right: 0;
+    width: 33%; /* O el ancho que prefieras */
+    background-color: var(--color4);
+    box-shadow: 0 4px 10px var(--color2);
+
+    /* ¡LA PIEZA CLAVE QUE FALTABA! */
+    display: none;
+  }
+
+  /* 2. Haz que la lista <ul> se apile verticalmente */
+  .main-nav ul {
+    flex-direction: column;
+    /* Apila los enlaces */
+    gap: 0;
+    /* Quita el espaciado de escritorio */
+    width: 100%;
+  }
+
+  /* 3. ¡El paso más importante! Cambia el color de los enlaces */
+  .main-nav a {
+    color: var(--dark-color);
+    /* ¡Color de texto oscuro! */
+    display: block;
+    /* Hace que el enlace ocupe todo el ancho */
+    padding: 12px 15px;
+    /* Añade espaciado interno */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    border-bottom: 1px solid var(--color1);
+    /* Línea separadora */
+    font-size: 14px !important;
+    /* Asegura el tamaño de fuente */
+  }
+
+  /* 4. Estilo para el enlace activo */
+  .main-nav a.main-nav-active {
+    color: var(--primary-color) !important;
+    /* Color de acento para el activo */
+    background-color: var(--color1);
+  }
+
+  /* 5. Estilo opcional para :hover */
+  .main-nav a:hover {
+    background-color: var(--color1);
+    color: var(--primary-color);
+  }
+
+
+
+  .menu-toggle {
+    display: block;
+    /*Muestra el botón hamburguesa*/
+  }
+
+  /*Muestra menu. Se ejecutara desde Javascript*/
+  .main-nav.show {
+    display: block;
+  }
+
+
+
   /* ===== AJUSTES GLOBALES ===== */
   h2 {
-    font-size: 1.8rem; /* Reduce el tamaño de todos los H2 en móvil */
+    font-size: 1.8rem;
+    /* Reduce el tamaño de todos los H2 en móvil */
   }
 
   /* ===== BARRA SUPERIOR (TELÉFONO Y REDES) ===== */
@@ -1281,7 +1368,8 @@ derecha */
 
   /* ===== HEADER / NAVEGACIÓN ===== */
   .main-header .main-nav a {
-    font-size: 12px; /* Hacemos la letra del menú más pequeña para que no se amontone */
+    font-size: 12px;
+    /* Hacemos la letra del menú más pequeña para que no se amontone */
   }
 
   /* ===== BARRA DE INFORMACIÓN (DEBAJO DEL HERO) ===== */
@@ -1290,21 +1378,25 @@ derecha */
   }
 
   .info-box a {
-    padding: 15px 5px; /* Reducimos el padding para ganar espacio */
+    padding: 15px 5px;
+    /* Reducimos el padding para ganar espacio */
   }
 
   .info-box i {
-    font-size: 22px; /* Hacemos los iconos más pequeños */
+    font-size: 22px;
+    /* Hacemos los iconos más pequeños */
     margin-bottom: 0.5rem;
   }
 
   .info-box h3 {
-    font-size: 0.75rem; /* Hacemos el texto más pequeño */
+    font-size: 0.75rem;
+    /* Hacemos el texto más pequeño */
   }
 
   /* ===== SECCIÓN DE TARIFAS (TABLA) ===== */
   .table-container {
-    overflow-x: auto; /* Permite el scroll horizontal solo en la tabla */
+    overflow-x: auto;
+    /* Permite el scroll horizontal solo en la tabla */
     padding-bottom: 10px;
   }
 
@@ -1319,81 +1411,198 @@ derecha */
     font-size: 13px;
   }
 }
+
 /* Ajustes responsive para pantallas tablet (hasta 768px) */
 @media screen and (max-width: 768px) {
+
+  .main-nav {
+    position: absolute;
+    top: 100%; /* O la altura de tu header + barra superior */
+    right: 0;
+    width: 33%; /* O el ancho que prefieras */
+    background-color: var(--color4);
+    box-shadow: 0 4px 10px var(--color2);
+
+    /* ¡LA PIEZA CLAVE QUE FALTABA! */
+    display: none;
+  }
+
+  /* 2. Haz que la lista <ul> se apile verticalmente */
+  .main-nav ul {
+    flex-direction: column;
+    /* Apila los enlaces */
+    gap: 0;
+    /* Quita el espaciado de escritorio */
+    width: 100%;
+  }
+
+  /* 3. ¡El paso más importante! Cambia el color de los enlaces */
+  .main-nav a {
+    color: var(--dark-color);
+    /* ¡Color de texto oscuro! */
+    display: block;
+    /* Hace que el enlace ocupe todo el ancho */
+    padding: 12px 15px;
+    /* Añade espaciado interno */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    border-bottom: 1px solid var(--color1);
+    /* Línea separadora */
+    font-size: 14px !important;
+    /* Asegura el tamaño de fuente */
+  }
+
+  /* 4. Estilo para el enlace activo */
+  .main-nav a.main-nav-active {
+    color: var(--primary-color) !important;
+    /* Color de acento para el activo */
+    background-color: var(--color1);
+  }
+
+  /* 5. Estilo opcional para :hover */
+  .main-nav a:hover {
+    background-color: var(--color1);
+    color: var(--primary-color);
+  }
+
+
+
+  .menu-toggle {
+    display: block;
+    /*Muestra el botón hamburguesa*/
+  }
+
+  /*Muestra menu. Se ejecutara desde Javascript*/
+  .main-nav.show {
+    display: block;
+  }
+
+  /***********/
   .hero-content h1 {
     font-size: 50px;
   }
+
   #about-us {
     padding-top: 20px;
   }
+
   #infob-bar {
     padding-bottom: 5px;
   }
+
   .service h3 {
     margin-top: 7px;
     font-size: 19px;
   }
+
   .service p {
     margin-top: 0px;
     font-size: 13.5px;
   }
+
   .button-wrapper {
     margin-top: 20px;
   }
+
   #especialista {
     padding-top: 50px;
   }
+
   #testimonials {
     background-color: var(--color1);
   }
+
   #testimonials p {
     font-size: 16.5px;
   }
+
   .section-padding {
-    padding: 20px 0; /* Reduce el espaciado vertical en todas las secciones */
+    padding: 20px 0;
+    /* Reduce el espaciado vertical en todas las secciones */
   }
+
   .container-videopromo {
     width: 90%;
     padding-top: 40px;
   }
+
   .container-videopromo p {
     font-size: 16.5px;
     padding-left: 1px;
   }
+
   .padding-xl {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
+  .main-header .container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; 
+}
+
+/* 2. Reglas de orden */
+.menu-toggle {
+  order: 3; /* Hamburguesa a la izquierda */
+}
+
+.main-header .btn {
+  order: 2; /* Botón AGENDAR al centro */
+  margin: 0; /* Quitamos márgenes por si acaso */
+}
+
+.logo {
+  order: 1; /* Logo a la derecha */
+}
+
+/* 4. Menú desplegable (para que se vaya abajo) */
+.main-header .main-nav {
+  order: 4;
+  flex-basis: 100%;
+  margin-top: 5px;
+}
+
+
   .margin-top {
-    margin-top: 40px; /* Reduce el margen superior del formulario */
+    margin-top: 40px;
+    /* Reduce el margen superior del formulario */
   }
+
   .form-control .col {
     flex-basis: 100%;
     max-width: 100%;
     width: 100%;
   }
+
   .tf2-form-imag {
     display: none;
     width: 0px;
   }
+
   .formulario-row {
     flex-basis: 100%;
     max-width: 100%;
   }
+
   .formulariocliente {
     margin-bottom: 30px;
   }
+
   .p-Dias {
     font-size: 14px;
   }
+
   .reloj-basis {
     display: none;
     width: 0px;
   }
+
   .horarios-dias {
     width: 100%;
     max-width: 100%;
     flex-basis: 100% !important;
   }
+
 }
